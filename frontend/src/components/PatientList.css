@@ -68,7 +68,7 @@
 .patient-id {
   font-size: 0.85rem;
   color: #666;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 
 .patient-info {
@@ -91,11 +91,12 @@
   border-top: 1px solid #e0e0e0;
   font-size: 0.85rem;
   color: #999;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   word-break: break-all;
 }
 
-.loading, .error {
+.loading,
+.error {
   text-align: center;
   padding: 3rem;
   font-size: 1.1rem;
@@ -156,4 +157,223 @@
   }
 }
 
+.patient-list-container {
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
 
+.loading,
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 18px;
+  color: #666;
+}
+
+.error {
+  flex-direction: column;
+  gap: 15px;
+}
+
+.retry-button {
+  padding: 8px 20px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.retry-button:hover {
+  background-color: #1565c0;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.clear-search {
+  padding: 8px 15px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #666;
+}
+
+.clear-search:hover {
+  background-color: #e0e0e0;
+}
+
+/* overrides grid if new version is applied */
+.patient-list {
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.patient-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.patient-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border-color: #1976d2;
+}
+
+.patient-card-header {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.patient-id {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.patient-details {
+  margin-bottom: 15px;
+}
+
+.detail-row {
+  display: flex;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #555;
+  min-width: 100px;
+}
+
+.detail-value {
+  color: #333;
+  word-break: break-word;
+}
+
+.wallet-address {
+  font-family: monospace;
+  background-color: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.patient-card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.created-date {
+  font-size: 12px;
+  color: #888;
+}
+
+.select-button {
+  padding: 6px 15px;
+  background-color: transparent;
+  color: #1976d2;
+  border: 1px solid #1976d2;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.select-button:hover {
+  background-color: #1976d2;
+  color: white;
+}
+
+.no-patients {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 16px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px dashed #ddd;
+}
+
+.pagination {
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  gap: 15px;
+}
+
+.page-button {
+  padding: 8px 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.page-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.total-count {
+  font-size: 12px;
+  color: #888;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 5px;
+}
+
+.page-number {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page-number:hover {
+  background-color: #f0f0f0;
+}
+
+.page-number.active {
+  background-color: #1976d2;
+  color: white;
+  border-color: #1976d2;
+}
+
+@media (max-width: 768px) {
+  .patient-list-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

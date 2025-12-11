@@ -71,7 +71,7 @@
 }
 
 .info-value.wallet {
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 0.9rem;
   word-break: break-all;
   color: #667eea;
@@ -172,7 +172,8 @@
   color: #f57c00;
 }
 
-.loading, .error {
+.loading,
+.error {
   text-align: center;
   padding: 3rem;
   font-size: 1.1rem;
@@ -204,4 +205,379 @@
   }
 }
 
+.patient-detail-container {
+  padding: 20px;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
 
+.loading,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  gap: 20px;
+}
+
+.loading {
+  font-size: 18px;
+  color: #666;
+}
+
+.error {
+  font-size: 16px;
+}
+
+.patient-detail-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.back-btn {
+  padding: 10px 20px;
+  background-color: #1976d2;
+  border-radius: 6px;
+  font-size: 14px;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.back-btn:hover {
+  background-color: #1565c0;
+  transform: translateX(-2px);
+}
+
+.patient-main-title {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  border: 1px solid #e8e8e8;
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  font-size: 22px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.patient-id-badge {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-left: auto;
+}
+
+.patient-info-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.info-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.info-label {
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.info-value {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.mono {
+  font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
+  font-size: 14px;
+}
+
+.email-link,
+.phone-link {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.email-link:hover,
+.phone-link:hover {
+  color: #1565c0;
+  text-decoration: underline;
+}
+
+.wallet-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.wallet-address {
+  font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  word-break: break-all;
+}
+
+.copy-btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.copy-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.copy-btn.small {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+/* Modern Records Section */
+.no-records {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px dashed #ddd;
+}
+
+.records-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 20px;
+}
+
+.record-card {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+}
+
+.record-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-color: #1976d2;
+}
+
+.record-title-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.record-title {
+  margin: 0;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.verified {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-badge.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-badge.unknown {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+.type-badge {
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.type-badge.diagnostic {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.type-badge.lab-results {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.type-badge.prescription {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.type-badge.surgery {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.type-badge.other {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+.record-details {
+  margin-bottom: 15px;
+}
+
+.record-detail-row {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #555;
+  min-width: 100px;
+}
+
+.detail-value {
+  color: #333;
+  word-break: break-word;
+}
+
+.record-description {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.description-label {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.description-text {
+  max-height: 100px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.description-text::-webkit-scrollbar {
+  width: 4px;
+}
+
+.description-text::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 2px;
+}
+
+.blockchain-info {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.hash-container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hash-value {
+  background-color: #f1f1f1;
+  font-family: "SF Mono", monospace;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.record-footer {
+  padding-top: 15px;
+  border-top: 1px solid #e8e8e8;
+  font-size: 12px;
+  color: #666;
+}
+
+.record-id {
+  font-family: "SF Mono", monospace;
+}
+
+
+@media (max-width: 768px) {
+  .patient-detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .records-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .record-detail-row {
+    flex-direction: column;
+  }
+
+  .detail-label {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .patient-detail-container {
+    padding: 15px;
+  }
+
+  .section-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .subtitle {
+    margin-left: 0;
+  }
+}

